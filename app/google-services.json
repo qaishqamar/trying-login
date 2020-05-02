@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "247884746136",
+    "firebase_url": "https://kotchingloginactivity.firebaseio.com",
+    "project_id": "kotchingloginactivity",
+    "storage_bucket": "kotchingloginactivity.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:247884746136:android:421d63e5fce641d359efed",
+        "android_client_info": {
+          "package_name": "com.example.kotchingloginactivity"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "247884746136-s86614bk4bpeoc8osej2qjuassn3kauj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.kotchingloginactivity",
+            "certificate_hash": "8fb0123464693042797baa804051ce28d08998f9"
+          }
+        },
+        {
+          "client_id": "247884746136-9j4i9l2u7rjlqkcq8ecr4cehg9635pgn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKWWvGQkbhnRtKwosX_0RIzkx-qQ06A_A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "247884746136-9j4i9l2u7rjlqkcq8ecr4cehg9635pgn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
