@@ -20,14 +20,23 @@ class MainActivity : AppCompatActivity() {
     val TAG="signin"
     var phonNo=""
     var verificationId=""
+    var num=""
     lateinit var mCallbacks:PhoneAuthProvider.OnVerificationStateChangedCallbacks
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         mAuth = FirebaseAuth.getInstance()
-       // phonNo=phone_no_et.text.toString()
+      // num=phone_no_et.text.toString()
         phone_login_btn.setOnClickListener {
-            verify()
+            if(phone_no_et.length() ==10){
+                verify()
+            }
+            else
+            {
+               Toast.makeText(this,"enter no. properly" +
+                       "you have enterd onl:${phone_no_et.length()} numbers ",Toast.LENGTH_SHORT).show()
+            }
+
         }
         login_otp_btn.setOnClickListener {
             authenticate()
@@ -61,8 +70,8 @@ class MainActivity : AppCompatActivity() {
         }
     }
     private fun verify(){
-        phonNo=phone_no_et.text.toString()
-        if (phonNo!=null) {
+        phonNo="+91"+phone_no_et.text.toString()
+
         verificationCallback()
             PhoneAuthProvider.getInstance().verifyPhoneNumber(
                 phonNo,
@@ -71,11 +80,8 @@ class MainActivity : AppCompatActivity() {
                 this,
                 mCallbacks
             )
-        }
-        else{
-            Toast.makeText(this,"enten your no properly",Toast.LENGTH_SHORT).show()
-            return
-        }
+
+
     }
     private fun signInWithPhoneAuthCredential(credential: PhoneAuthCredential) {
         mAuth.signInWithCredential(credential)
